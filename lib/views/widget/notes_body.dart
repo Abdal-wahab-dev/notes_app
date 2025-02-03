@@ -14,7 +14,7 @@ class NotesBody extends StatelessWidget {
       
          children:   [
        SizedBox(height: 50.0,),
-      NotesAppbar(),
+      NotesAppbar(title: "Notes",icon: Icons.search,),
       Expanded(child: notesListView())
          ],
       ),
@@ -33,7 +33,7 @@ class notesListView extends StatelessWidget {
         itemBuilder: (context,index){
         return Padding(
           padding: const EdgeInsets.symmetric(vertical:  8.0),
-          child: const notesItem(),
+          child: notesItem(),
         );
       }),
     );

@@ -2,13 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
 class NotesAppbar extends StatelessWidget {
-  const NotesAppbar({super.key});
-
+  const NotesAppbar({super.key, required this.title, required this.icon});
+ final String title;
+ final IconData icon;
   @override
   Widget build(BuildContext context) {
     return  Row(
       children: [
-        Text("Notes",style: TextStyle(fontSize: 24.0,fontWeight: FontWeight.bold),),
+        Text("$title",style: TextStyle(fontSize: 24.0,fontWeight: FontWeight.bold),),
         Spacer(),
         Container(
           width: 45.0,
@@ -18,7 +19,7 @@ class NotesAppbar extends StatelessWidget {
             borderRadius: BorderRadius.circular(18)
           ),
           child: Center(
-            child: Icon(Icons.search),
+            child: Icon(icon),
           ),
         )
        
